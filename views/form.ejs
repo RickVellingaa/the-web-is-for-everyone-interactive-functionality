@@ -1,10 +1,5 @@
 <%- include('./partials/head.ejs') %>
-
-<nav>
-  <ul>
-    <li><a href="/">Terug naar home</a></li>
-	</ul>
-</nav>
+<%- include('./partials/navigation.ejs') %>
 
   <form action="/form" method="post">
 		<% if(locals.error !== undefined){ %>
@@ -15,8 +10,8 @@
 				<label for="squads">Select your squad</label>
 				
 				<select required name="squad" id="squads">
-						<!-- <option value="cldczeqqt178k0avw3jmbc8wy">Squad A</option>
-						<option value="cldczf97o17ul0auom0qsu3aw">Squad B</option> -->
+						<option value="cldczeqqt178k0avw3jmbc8wy">Squad A</option>
+						<option value="cldczf97o17ul0auom0qsu3aw">Squad B</option>
 						<option selected value="cldczfwic17ve0auohhcaumpm">Squat C</option>
 				</select>
   

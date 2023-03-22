@@ -16,39 +16,43 @@ server.use(express.urlencoded({ extended: true }))
 
 // Maak een route voor de index
 server.get('/', (request, response) => {
-  const baseurl = "https://whois.fdnd.nl/api/v1"
-  const slug = request.query.squad || 'squad-a-2022'
-  const url = `${baseurl}/squad/${slug}`
+  // const baseurl = "https://api.vervoerregio-amsterdam.fdnd.nl/api/v1/principes"
+  // const slug = request.query.squad || 'squad-a-2022'
+  // const url = `${baseurl}/squad/${slug}`
+  
+  const url = "https://api.vervoerregio-amsterdam.fdnd.nl/api/v1/principes"
 
   fetchJson(url).then((data) => {
     response.render('index', data)
   })
 })
 
-server.get('/form', (request, response) => {
-  response.render('form')
+server.get('/contact', (request, response) => {
+  response.render('contact')
 })
 
-server.post('/form', (request, response) => {
-  const baseurl = "https://whois.fdnd.nl/api/v1"
+// server.get('/form', (request, response) => {
+//   response.render('form')
+// })
 
-  const url = `${baseurl}/member`
+// server.post('/form', (request, response) => {
+//   const baseurl = "https://whois.fdnd.nl/api/v1"
 
-  postJson(url, request.body).then((data) => {
-    let newMember = { ... request.body }
+//   const url = `${baseurl}/member`
 
-    if (data.success) {
-      response.redirect('/?memberPosted=true') 
-      // TODO: squad meegeven, message meegeven
-      // TODO: Toast meegeven aan de homepagina
-    } else {
-      const errormessage = `${data.message}: Mogelijk komt dit door de slug die al bestaat.`
-      const newdata = { error: errormessage, values: newMember }
+//   postJson(url, request.body).then((data) => {
+//     let newMember = { ... request.body }
+
+//     if (data.success) {
+//       response.redirect('/?memberPosted=true') 
+//     } else {
+//       const errormessage = `${data.message}: Mogelijk komt dit door de slug die al bestaat.`
+//       const newdata = { error: errormessage, values: newMember }
       
-      response.render('form', newdata)
-    }
-  })
-})
+//       response.render('form', newdata)
+//     }
+//   })
+// })
 
 // Stel het poortnummer in
 server.set('port', 4000)
