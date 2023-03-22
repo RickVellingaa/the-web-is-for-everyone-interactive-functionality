@@ -1,0 +1,17 @@
+<%- include('./partials/head.ejs') %>
+<%- include('./partials/navigation.ejs') %>
+
+<main>
+  <h1><%= squad.name %></h1>
+  
+  <% squad.members.forEach(member => { %>
+    <article>
+      <h2><%= member.name %> <%= member.prefix %> <%= member.surname %></h2>
+      <img src="<%= member.avatar != '' ? member.avatar :'/placeholder.jpg' %>" alt="De avatar van <%= member.name %>" />
+      <a href="/member/?id=<%= member.id %>"></a>
+    </article>
+  <% }) %>
+  
+</main>
+
+<%- include('./partials/foot.ejs') %>

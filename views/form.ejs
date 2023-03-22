@@ -1,0 +1,61 @@
+<%- include('./partials/head.ejs') %>
+
+<nav>
+  <ul>
+    <li><a href="/">Terug naar home</a></li>
+	</ul>
+</nav>
+
+  <form action="/form" method="post">
+		<% if(locals.error !== undefined){ %>
+			<p class="message"><%= error %></p>
+		<% } %>
+		<fieldset>
+			<legend><span>1</span> Verplichte waardes</legend>
+				<label for="squads">Select your squad</label>
+				
+				<select required name="squad" id="squads">
+						<!-- <option value="cldczeqqt178k0avw3jmbc8wy">Squad A</option>
+						<option value="cldczf97o17ul0auom0qsu3aw">Squad B</option> -->
+						<option selected value="cldczfwic17ve0auohhcaumpm">Squat C</option>
+				</select>
+  
+				<label for="slug">slug:</label>
+				<input required type="text" name="slug" id="slug" placeholder="..." value="<%= locals.values?.slug ?? '' %>" />
+		</fieldset>
+
+		<fieldset>
+			<legend><span>2</span> Persoonlijke gegevens </legend>
+
+
+			<label for="name">name:</label>
+			<input type="text" name="name" id="name" placeholder="..." value="<%= locals.values?.name ?? '' %>" />
+
+			<label for="prefix">prefix:</label>
+			<input type="text" name="prefix" id="prefix" placeholder="..." value="" />
+
+			<label for="surname">surname:</label>
+			<input type="text" name="surname" id="surname" placeholder="..." value="" />
+
+			<label for="nickname">nickname:</label>
+			<input type="text" name="nickname" id="nickname" placeholder="..." value="" />
+
+			<label for="avatar">avatar:</label>
+			<input type="text" name="avatar" id="avatar" placeholder="..." value="" />
+
+			<label for="gitHubHandle">gitHubHandle:</label>
+			<input type="text" name="gitHubHandle" id="gitHubHandle" placeholder="..." value="" />
+
+			<label for="website">website:</label>
+			<input type="text" name="website" id="website" placeholder="..." value="" />
+
+			<label for="colour">colour:</label>
+			<input type="color" name="colour" id="colour" placeholder="..." value="" />
+
+			<label for="bio">bio:</label>
+			<textarea name="bio" id="bio" cols="30" rows="10" placeholder="..."></textarea>
+			<input type="submit" value="Opslaan" /> 
+		</fieldset>
+  </form>
+
+<%- include('./partials/foot.ejs') %>
