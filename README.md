@@ -1,1 +1,49 @@
-﻿# Content Layer WTF## Grote plaatje schetsen: refactor + resimpelIn deze les ga ik vanaf nul de basisfunctionaliteit nabouwen wat Justus heeft voorgedaan. Hoe werkt het? Wat betekent het? Wat doet het? Ik ga jullie laten zien hoe je kan ontdekken en begrijpen door te gaan 'pielen'. Lekker spelen!## Opzet project- NPM init + npm install ejs express dotenv- Package.json aanpassen: start script- index.js boiler plate doorlopen- app starten en testen- Package.json aanpassen: module, start script### Wat gaan we maken?- Voorbeeld laten zien, waar willen we naar toe- eerste route bepalen voor de homepagina: get('/')### get('/')- reponse.render, views mapje aanmaken, index.ejs en- bepalen welke data we nodig hebben en hoe krijgen we die terug van de API: https://whois.fdnd.nl/docs (RTFM)- variablen aanmaken: baseurl, slug, url- hoe komen we te weten wat de slug is? Query! Console loggen van request- fetch functie gebruiken en data meesturen naar EJS- EJS template aanpassen### get('/new')- EJS template aanmaken  - method (zowel post als get laten zien) en action uitleggen en de basis opzetten van de post('/new')  - zie vorig college voor semantics  - attributen die de gebruiker helpen (zie artikel Krijn)  - select maken voor de squads### post('/new')- postJSON functie kopieëren- voeg de regels toe voor het afhandelen van een formulier in express (anders ben je heel lang bezig.....)- post requesten = iets meesturen, dit zit in de body- ID wordt gemaakt door de API### optimaliserenSS:- brainstormen wat goed werkt..- slug bestaat al- db connectie- posten wel/niet gelukt (meerdere manieren mogelijk, wat werkt?)HTML:- required- slug checkRefactoren code:- helpers mapje aanmaken
+# Server side website | Vervoerregio Amsterdam
+
+![Vervoerregio](https://user-images.githubusercontent.com/112856287/225363093-c91969be-c031-44b5-a36c-c1d89bee750a.png)
+
+Het doel van de opdracht was om een API/Database te gebruiken voor het ontwerpen en ontwikkelen van een gebruiksvriendelijke server-side website voor Vervoerregio Amsterdam
+
+## Inhoudsopgave
+
+  * [Beschrijving](#beschrijving)
+  * [Kenmerken](#kenmerken)
+  * [Installatie](#installatie)
+  * [Gebruik](#gebruik)
+  * [Bronnen](#bronnen)
+  
+## Beschrijving
+
+Er is voor Vervoerregio Amsterdam een toegankelijkhedis-tool/toolboard gemaakt waarmee je websites gemakkelijk toegankelijk kan maken door de verschillende richtlijnen e volgen van de WCAG principes.
+
+## Kenmerken
+
+  * HTML
+  * CSS
+  * JS
+  * NODE
+  * EJS
+  * EXPRESS
+  * JSON
+  * REST API  
+  
+Naast deze kenmerken heb ik doormiddel van een forEach loop ervoor gezorgd dat ik alle principes heb kunnen tonen in een aparte contaienr. Hiermee heb ik ervoor kunnen zorgen dat ik een soort navigatie menu kon maken voor alle richtlijnen zodat er telkens maar 1 richtlijn tegelijk in beeld is. 
+
+## Installatie
+
+ 1. Download de code via de zip
+ 2. Pak het bestand uit
+ 3. Open het uitgepakte bestand
+ 4. Open de command line
+ 5. Voer npm install uit
+ 6. npm start in terminal/command line
+ 7. Ga vervolgens na de link wat onderaan in de terminal komt de staan in een browser
+## Gebruik
+
+Met dit project kan je ervoor zorgen dat je een website (van een partner) kan beoordelen volgens de checklist van de WCAG principes en richtlijnen. Uiteindelijk kan je op basis van de succescritera kijken wat er nog niet gelukt is en op basis daarvan je website verbeteren. 
+
+## Bronnen
+
+[Vervoerregio Amsterdam API](https://api.vervoerregio-amsterdam.fdnd.nl/docs) <br>
+[Vervoerregio Amsterdam](https://vervoerregio.nl/) <br>
+[Huisstijl Vervoerregio Amsterdam](https://github.com/fdnd-agency/vervoerregio-amsterdam/blob/main/Vervoerregio%20Handboek_Huisstijl%202021.pdf)
