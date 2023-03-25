@@ -1,10 +1,10 @@
 // Buttons voor informatie principes
-const guidelineBtn = document.querySelectorAll('.guidelines__btn')
-const guidelineInfo = document.querySelectorAll('.principleInfo')
+const guidelineBtn = document.querySelectorAll('.richtlijn__btn')
+const guidelineInfo = document.querySelectorAll('.principe__informatie')
 
 // Buttons voor informatie crincipes
-const criteriaBtn = document.querySelectorAll('.guidelines__btn1')
-const criteraInfo = document.querySelectorAll('.criteriaInfo')
+const criteriaBtn = document.querySelectorAll('.richtlijn__btn1')
+const criteraInfo = document.querySelectorAll('.criteria__informatie')
 
 // Active menu item
 const currentLocation = location.href;
@@ -28,8 +28,8 @@ criteriaBtn.forEach(item => {
         const id = item.dataset.id
         const active = document.getElementById(id)
 
-        criteraInfo.forEach(content => content.classList.add('hide1'))
-        active.classList.remove('hide1')
+        criteraInfo.forEach(content => content.classList.add('hide'))
+        active.classList.remove('hide')
 
     })
 

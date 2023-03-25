@@ -1,49 +1,34 @@
-# Server side website | Vervoerregio Amsterdam
+> _Fork_ deze leertaak en ga aan de slag. Onderstaande outline ga je gedurende deze taak in jouw eigen GitHub omgeving uitwerken. De instructie vind je in: [docs/INSTRUCTIONS.md](docs/INSTRUCTIONS.md)
 
-![Vervoerregio](https://user-images.githubusercontent.com/112856287/225363093-c91969be-c031-44b5-a36c-c1d89bee750a.png)
-
-Het doel van de opdracht was om een API/Database te gebruiken voor het ontwerpen en ontwikkelen van een gebruiksvriendelijke server-side website voor Vervoerregio Amsterdam
+# Titel
+<!-- Geef je project een titel en schrijf in één zin wat het is -->
 
 ## Inhoudsopgave
 
   * [Beschrijving](#beschrijving)
+  * [Gebruik](#gebruik)
   * [Kenmerken](#kenmerken)
   * [Installatie](#installatie)
-  * [Gebruik](#gebruik)
   * [Bronnen](#bronnen)
-  
-## Beschrijving
+  * [Licentie](#licentie)
 
-Er is voor Vervoerregio Amsterdam een toegankelijkhedis-tool/toolboard gemaakt waarmee je websites gemakkelijk toegankelijk kan maken door de verschillende richtlijnen e volgen van de WCAG principes.
+## Beschrijving
+<!-- Bij Beschrijving staat kort beschreven wat voor project het is en wat je hebt gemaakt -->
+<!-- Voeg een mooie poster visual toe 📸 -->
+<!-- Voeg een link toe naar Github Pages 🌐-->
+
+## Gebruik
+<!- Bij Gebruik staat de user story, hoe het werkt en wat je er mee kan. -->
 
 ## Kenmerken
-
-  * HTML
-  * CSS
-  * JS
-  * NODE
-  * EJS
-  * EXPRESS
-  * JSON
-  * REST API  
-  
-Naast deze kenmerken heb ik doormiddel van een forEach loop ervoor gezorgd dat ik alle principes heb kunnen tonen in een aparte contaienr. Hiermee heb ik ervoor kunnen zorgen dat ik een soort navigatie menu kon maken voor alle richtlijnen zodat er telkens maar 1 richtlijn tegelijk in beeld is. 
+<!-- Bij Kenmerken staat welke technieken zijn gebruikt en hoe. Wat is de HTML structuur? Wat zijn de belangrijkste dingen in CSS? Wat is er met JS gedaan en hoe? Misschien heb je iets met NodeJS gedaan, of heb je een framwork of library gebruikt? -->
 
 ## Installatie
+<!-- Bij Instalatie staat hoe een andere developer aan jouw repo kan werken -->
 
- 1. Download de code via de zip
- 2. Pak het bestand uit
- 3. Open het uitgepakte bestand
- 4. Open de command line
- 5. Voer npm install uit
- 6. npm start in terminal/command line
- 7. Ga vervolgens na de link wat onderaan in de terminal komt de staan in een browser
-## Gebruik
-
-Met dit project kan je ervoor zorgen dat je een website (van een partner) kan beoordelen volgens de checklist van de WCAG principes en richtlijnen. Uiteindelijk kan je op basis van de succescritera kijken wat er nog niet gelukt is en op basis daarvan je website verbeteren. 
 
 ## Bronnen
 
-[Vervoerregio Amsterdam API](https://api.vervoerregio-amsterdam.fdnd.nl/docs) <br>
-[Vervoerregio Amsterdam](https://vervoerregio.nl/) <br>
-[Huisstijl Vervoerregio Amsterdam](https://github.com/fdnd-agency/vervoerregio-amsterdam/blob/main/Vervoerregio%20Handboek_Huisstijl%202021.pdf)
+## Licentie
+
+This project is licensed under the terms of the [MIT license](./LICENSE).

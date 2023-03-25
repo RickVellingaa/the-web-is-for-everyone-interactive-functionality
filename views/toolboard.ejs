@@ -1,0 +1,24 @@
+<%- include('./partials/head') %>
+<%- include('./partials/header') %>
+
+<main class="toolboard">
+    <div class="toolboard__intro">
+        <h1>Partners</h1>
+        <p>Bekijk alle partners en hun websites en controleer via onze checklist of zij voldoen aan de wcag richtlijnen. Vanaf 2025 moet iedere website digitaal toegankelijk zijn.</p>
+        <a href="form"><button>Voeg een website toe om te checken</button></a>
+    </div>
+
+    <div class="partners">
+        <% website_data.websites.forEach(website=> { %>
+        <div class="partners__container">
+            <div>
+                <h4><%= website.titel %></h4>
+                <a class="partners__link" target="_blank" href="<%= website.homepage %>"><%= website.homepage %></a>
+                <div class="website__urls"></div>
+            </div>
+        </div>
+        <%})%>
+    </div>
+</main>
+
+<%- include('./partials/foot') %>
