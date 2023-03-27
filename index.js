@@ -26,50 +26,44 @@ app.use(express.urlencoded({ extended: true }))
 // Gebruik de map 'public' voor statische resources
 app.use(express.static('public'))
 
-// Maak een route voor de toolboard
 app.get('/', function (req, res) {
-  console.log(data)
+  res.render('home', {url_data, data, website_data, active: '/'})
+})
+
+// Maak een route voor de toolboard
+app.get('/toolboard', function (req, res) {
   res.render('toolboard', {url_data, data, website_data, active: '/'})
 })
 
 // Maak een route voor de checklist
 app.get('/checklist', function (req, res) {
-  console.log(data)
   res.render('checklist', {api: data, active: '/checklist'})
 })
 
 // Maak een route voor de form
 app.get('/form', function (req, res) {
-  console.log(data)
   res.render('form', {website_data, active: '/form'})
 })
 
 app.get('/partners', (request, response) => {
 
   let id = request.query.websiteId
-  let partnerUrl = 'https://api.vervoerregio-amsterdam.fdnd.nl/api/v1/urls?websiteId=' + id
-  console.log(request.query);
+  let partnerUrl = 'https://api.vervoerregio-amsterdam.fdnd.nl/api/v1/urls?websiteId=' + id + '&first=100'
   
-  fetchJson(partnerUrl).then((data) => {
-    response.render('member', {url_data, data, website_data, active: '/'})
+  fetchJson(partnerUrl).then((partnerData) => {
+    response.render('partners', partnerData)
   })
 
 })
 
 // haalt post data op
 app.post('/form', function(req, res) {
-  // console.log(req.body)
-  // TODO voor Sascha :)
-  // POST naar https://api.vervoerregio-amsterdam.fdnd.nl/api/v1/urls, de req.body
-
   const formURL = baseURL + urlSlug
   postJson(formURL, req.body).then((data) => {
     let newURL = { ... req.body }
     console.log(JSON.stringify(data))
     if (data.data) {
       res.redirect('/') 
-      // TODO: squad meegeven, message meegeven
-      // TODO: Toast meegeven aan de homepagina
     } else {
       const errormessage = `${req.body.url}: URl bestaat al.`
       const newdata = { error: errormessage, values: newURL }
@@ -87,6 +81,12 @@ app.listen(app.get('port'), function () {
   // Toon een bericht in de console en geef het poortnummer door
   console.log(`Application started on http://localhost:${app.get('port')}`)
 })
+
+async function fetchJson(url) {
+  return await fetch(url)
+    .then((response) => response.json())
+    .catch((error) => error)
+}
 
 /**
  * postJson() is a wrapper for the experimental node fetch api. It fetches the url

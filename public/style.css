@@ -120,7 +120,7 @@ header .logo {
 }
 
 /* Toolboard pagina */
-.toolboard {
+.toolboard, .list {
   display: flex;
   flex-direction: column;
   position: relative;
@@ -131,14 +131,18 @@ header .logo {
   max-width: 40em; 
 }
 
-.toolboard .partners {
+.toolboard .partners, .websites {
   padding: 2em 0;
   display: grid;
   grid-template-columns: repeat(3, 1fr); 
   gap: 20px;
 }
 
-.partners .partners__container {
+.websites {
+  padding-top: .5em;
+}
+
+.partners .partners__container, .websites .websites__container {
   background-color: #fff;
   box-shadow: 0px 5px 6px rgba(0, 0, 0, 0.3);
   padding: 1em; 
@@ -148,7 +152,7 @@ header .logo {
   align-items: center;
 }
 
-.partners__link {
+.partners__link, .websites__link {
   color: var(--clr-blue);
   outline: none;
   border: none;
