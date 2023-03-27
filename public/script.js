@@ -8,7 +8,7 @@ const criteraInfo = document.querySelectorAll('.criteria__informatie')
 
 // Active menu item
 const currentLocation = location.href;
-const menuItem = document.querySelectorAll('a');
+const menuItem = document.querySelectorAll('.navigation ul li a');
 const menuLength = menuItem.length;
 
 guidelineBtn.forEach(item => {

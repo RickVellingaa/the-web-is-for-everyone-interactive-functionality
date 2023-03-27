@@ -44,9 +44,21 @@ app.get('/form', function (req, res) {
   res.render('form', {website_data, active: '/form'})
 })
 
+app.get('/partners', (request, response) => {
+
+  let id = request.query.websiteId
+  let partnerUrl = 'https://api.vervoerregio-amsterdam.fdnd.nl/api/v1/urls?websiteId=' + id
+  console.log(request.query);
+  
+  fetchJson(partnerUrl).then((data) => {
+    response.render('member', {url_data, data, website_data, active: '/'})
+  })
+
+})
+
 // haalt post data op
 app.post('/form', function(req, res) {
-  console.log(req.body)
+  // console.log(req.body)
   // TODO voor Sascha :)
   // POST naar https://api.vervoerregio-amsterdam.fdnd.nl/api/v1/urls, de req.body
 
