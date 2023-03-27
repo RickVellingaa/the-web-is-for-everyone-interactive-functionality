@@ -46,14 +46,21 @@ app.get('/form', function (req, res) {
 })
 
 app.get('/partners', (request, response) => {
-
   let id = request.query.websiteId
   let partnerUrl = 'https://api.vervoerregio-amsterdam.fdnd.nl/api/v1/urls?websiteId=' + id + '&first=100'
   
   fetchJson(partnerUrl).then((partnerData) => {
     response.render('partners', partnerData)
   })
+})
 
+app.get('/check', (request, response) => {
+  let id = request.query.id
+  let checkUrl = 'https://api.vervoerregio-amsterdam.fdnd.nl/api/v1/url?id=' + id
+  
+  fetchJson(checkUrl).then((checkData) => {
+    response.render('check', checkData)
+  })
 })
 
 // haalt post data op
