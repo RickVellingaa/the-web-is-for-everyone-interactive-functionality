@@ -1,6 +1,6 @@
 # Toolboard | Vervoerregio Amsterdam
 
-![Vervoerregio](https://user-images.githubusercontent.com/112856287/225363093-c91969be-c031-44b5-a36c-c1d89bee750a.png)
+![sprint2](https://user-images.githubusercontent.com/112856287/229064634-9f78256a-1c1c-484c-a76b-6668918c242e.png)
 
 Het doel van de opdracht was om een API/Database te gebruiken voor het ontwerpen en ontwikkelen van een gebruiksvriendelijke server-side website voor Vervoerregio Amsterdam
 
