@@ -50,9 +50,26 @@ app.get('/partners', (request, response) => {
   let partnerUrl = 'https://api.vervoerregio-amsterdam.fdnd.nl/api/v1/urls?websiteId=' + id + '&first=100'
   
   fetchJson(partnerUrl).then((partnerData) => {
-    response.render('partners', partnerData)
+    response.render('partners', {partnerData, website_data, active: '/partners'})
   })
 })
+
+app.post('/partners', function(req, res) {
+  const formURL = baseURL + urlSlug
+  postJson(formURL, req.body).then((data) => {
+    let newURL = { ... req.body }
+    console.log(JSON.stringify(data))
+    if (data.data) {
+      res.redirect('/toolboard') 
+    } else {
+      const errormessage = `${req.body.url}: URl bestaat al.`
+      const newdata = { error: errormessage, values: newURL }
+      
+      res.render('partners', {newdata, website_data, active: '/partners' })
+    }
+  })
+})
+
 
 app.get('/check', (request, response) => {
   let id = request.query.id

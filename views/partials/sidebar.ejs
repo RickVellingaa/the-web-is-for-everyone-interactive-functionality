@@ -1,0 +1,21 @@
+<nav>
+  <form class="sideform" method="post" action="/partners">
+      <h2>Partner formulier</h2>
+      <label for="name">Naam van partner <span>(verplicht)</span></label>
+      <select id="name" name="websiteId">
+          <% website_data.websites.forEach(website=> { %>
+          <option value="<%= website.id  %>"><%= website.titel %></option>
+          <%})%>
+      </select>
+  
+      <label for="name">URL van website <span>(verplicht)</span></label>
+      <input id="name" type="url" required name="url">
+  
+      <input type="submit" />
+  </form>
+</nav>
+  
+
+
+
+

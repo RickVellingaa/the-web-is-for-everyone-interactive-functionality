@@ -5,18 +5,23 @@
     <div class="toolboard__intro">
         <h1>Websites</h1>
     </div>
-    <div class="websites">
-        <% urls.forEach(url=> { %>
-        <div class="websites__container">
-            <div>
-                <h4><%= url.website.titel %></h4>
-                <a class="websites__link" target="_blank" href="<%= url.url %>"><%= url.url %></a>
+    <div class="flex-column">
+        <div class="websites">
+            <% partnerData.urls.forEach(url=> { %>
+            <div class="websites__container">
+                <div>
+                    <h4><%= url.website.titel %></h4>
+                    <a class="websites__link" target="_blank" href="<%= url.url %>"><%= url.url %></a>
+                </div>
+                <div class="website__urls">
+                    <a class="website__icon" href="/check?id=<%= url.id %>"><img src="/assets/checkmark-outline.svg" alt=""></a>
+                </div>
             </div>
-            <div class="website__urls">
-                <a class="website__icon" href="/check?id=<%= url.id %>"><img src="/assets/checkmark-outline.svg" alt=""></a>
-            </div>
+            <%})%>
         </div>
-        <%})%>
+        <div>
+            <%- include('./partials/sidebar') %>
+        </div>
     </div>
 </main>
 

@@ -37,17 +37,15 @@ body {
   min-height: 100%;
 }
 
-main {
-  padding: 3em 10%;
-
-}
-
 h1 {
   color: var(--main-pink);
   font-size: 3em;
 }
 
-h2, h3, h4, h5 {
+h2,
+h3,
+h4,
+h5 {
   color: var(--main-pink);
 }
 
@@ -90,16 +88,16 @@ header .logo {
   font-size: 1.2em;
 }
 
-.navigation ul li a{
+.navigation ul li a {
   text-decoration: none;
   color: black;
 }
 
-.navigation ul li a:visited{
+.navigation ul li a:visited {
   color: black;
 }
 
-.navigation ul li a:hover{
+.navigation ul li a:hover {
   color: var(--main-pink);
   transition: .2s;
 }
@@ -120,21 +118,24 @@ header .logo {
 }
 
 /* Toolboard pagina */
-.toolboard, .list {
+.toolboard,
+.list,
+main {
   display: flex;
   flex-direction: column;
   position: relative;
-  padding: 3em 10%;
+  padding: 3em 6%;
 }
 
 .toolboard .toolboard__intro p {
-  max-width: 40em; 
+  max-width: 40em;
 }
 
-.toolboard .partners, .websites {
-  padding: 2em 0;
+.toolboard .partners,
+.websites {
+  padding: 1em 0;
   display: grid;
-  grid-template-columns: repeat(3, 1fr); 
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
 
@@ -142,29 +143,32 @@ header .logo {
   padding-top: .5em;
 }
 
-.partners .partners__container, .websites .websites__container {
+.partners .partners__container,
+.websites .websites__container {
   background-color: #fff;
   box-shadow: 0px 5px 6px rgba(0, 0, 0, 0.3);
-  padding: 1em; 
-  border-radius: .7em; 
+  padding: 1em;
+  border-radius: .7em;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.partners__link, .websites__link {
+.partners__link,
+.websites__link {
   color: var(--clr-blue);
   outline: none;
   border: none;
 }
 
-.website__icon{
+.website__icon {
   background-color: var(--main-fade);
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 7px;
   border-radius: 15px;
+  margin-left: 5px;
 }
 
 
@@ -200,7 +204,8 @@ header .logo {
   box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.3);
 }
 
-.richtlijn__btn, .richtlijn__btn1 {
+.richtlijn__btn,
+.richtlijn__btn1 {
   border: 2px solid var(--main-pink);
   padding: .5em;
   font-size: .8em;
@@ -211,12 +216,14 @@ header .logo {
   background: transparent;
 }
 
-.richtlijn__btn:hover, .richtlijn__btn1:hover{
+.richtlijn__btn:hover,
+.richtlijn__btn1:hover {
   background-color: var(--main-pink);
   color: #fff;
 }
 
-.principe__richtlijnen .richtlijn__btn:first-child, .principe__richtlijnen .richtlijn__btn1:first-child{
+.principe__richtlijnen .richtlijn__btn:first-child,
+.principe__richtlijnen .richtlijn__btn1:first-child {
   margin-left: 0;
 }
 
@@ -226,13 +233,15 @@ header .logo {
   padding: .5em;
 }
 
-.principe__informatie p, .principe__informatie ul li div, .principe__informatie ol li div{
+.principe__informatie p,
+.principe__informatie ul li div,
+.principe__informatie ol li div {
   color: black;
   font-family: var(--textFont);
   font-size: .85em;
 }
 
-.principe__informatie p{
+.principe__informatie p {
   padding: 2px 0;
 }
 
@@ -240,9 +249,10 @@ header .logo {
   padding: 1px 0;
 }
 
-.principe__informatie ul, .principe__informatie ol {
+.principe__informatie ul,
+.principe__informatie ol {
   margin-left: 1em;
-  list-style-type:decimal;
+  list-style-type: decimal;
   color: black;
   font-family: var(--textFont);
 }
@@ -274,9 +284,9 @@ header .logo {
   -webkit-appearance: none;
   transition: .2s;
   outline: none;
-} 
+}
 
-.criteria__informatie input[type="checkbox"]:checked{
+.criteria__informatie input[type="checkbox"]:checked {
   background-color: var(--main-pink);
 }
 
@@ -316,10 +326,17 @@ svg path {
   margin-bottom: 10px;
 }
 
+.flex-column {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 80% 20%;
+  gap: 2em;
+}
+
 form {
   color: var(--main-pink);
   margin: auto;
-  margin-top: 13em;
+  /* margin-top: 13em; */
   border: 2px solid var(--main-pink);
   border-radius: 1em;
   padding: 1em;
@@ -328,7 +345,15 @@ form {
   flex-direction: column;
 }
 
-input[type=text], input[type=url], select {
+form label,
+form label span {
+  font-family: var(--textFont);
+  /* margin-top: 5px; */
+}
+
+input[type=text],
+input[type=url],
+select {
   width: 100%;
   padding: 12px 5px;
   color: var(--main-pink);
@@ -351,8 +376,58 @@ input[type=submit] {
   background-color: var(--main-pink);
 }
 
+@media screen and (max-width: 1850px) {
+  .toolboard .partners,
+  .websites {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media screen and (max-width: 1400px) {
   .principe__informatie ul li {
-      padding: 4px 0;
+    padding: 4px 0;
+  }
+}
+
+@media screen and (max-width: 1220px) {
+  .toolboard .partners,
+  .websites {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .website__icon {
+    margin-left: 0px;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .flex-column {
+    display: grid;
+    grid-template-rows: 1fr .5fr;
+    grid-template-columns: 1fr;
+  }
+
+  .toolboard .partners,
+  .websites {
+    padding: .5em 0;
+  }
+
+  .toolboard .toolboard__intro button {
+    padding: 0.5em 1.5em;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .websites__link {
+    font-size: 0.8em;
+  }
+
+  .website__icon {
+    padding: 2px;
+    border-radius: 10px;
+  }
+
+  .partners .partners__container,
+  .websites .websites__container {
+    padding: .5em;
   }
 }
