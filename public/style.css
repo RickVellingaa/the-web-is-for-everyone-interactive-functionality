@@ -377,6 +377,7 @@ input[type=submit] {
 }
 
 @media screen and (max-width: 1850px) {
+
   .toolboard .partners,
   .websites {
     grid-template-columns: repeat(2, 1fr);
@@ -390,10 +391,12 @@ input[type=submit] {
 }
 
 @media screen and (max-width: 1220px) {
+
   .toolboard .partners,
   .websites {
     grid-template-columns: repeat(1, 1fr);
   }
+
   .website__icon {
     margin-left: 0px;
   }
@@ -414,6 +417,7 @@ input[type=submit] {
   .toolboard .toolboard__intro button {
     padding: 0.5em 1.5em;
   }
+
 }
 
 @media screen and (max-width: 500px) {
@@ -429,5 +433,24 @@ input[type=submit] {
   .partners .partners__container,
   .websites .websites__container {
     padding: .5em;
+  }
+
+  .navigation::before {
+    content: "";
+    width: 3.5em;
+    height: 3.5em;
+    position: absolute;
+    top: 2.5em;
+    left: 8.2em;
+    box-shadow: 0.1em -1em 0 -0.2em white;
+    border-radius: 60% 0 0 0;
+  }
+
+  header .logo {
+    height: 3.7em;
+  }
+
+  .toolboard .toolboard__intro button {
+    padding: 0.5em 0.5em;
   }
 }
