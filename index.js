@@ -32,7 +32,7 @@ app.get('/', function (req, res) {
 
 // Maak een route voor de toolboard
 app.get('/toolboard', function (req, res) {
-  res.render('toolboard', {url_data, data, website_data, active: '/'})
+  res.render('toolboard', {url_data, data, website_data, active: '/toolboard'})
 })
 
 // Maak een route voor de checklist
@@ -76,7 +76,7 @@ app.get('/check', (request, response) => {
   let checkUrl = 'https://api.vervoerregio-amsterdam.fdnd.nl/api/v1/url?id=' + id
   
   fetchJson(checkUrl).then((checkData) => {
-    response.render('check', checkData)
+    response.render('check', {checkData, active: '/check'})
   })
 })
 
@@ -85,7 +85,7 @@ app.post('/form', function(req, res) {
   const formURL = baseURL + urlSlug
   postJson(formURL, req.body).then((data) => {
     let newURL = { ... req.body }
-    console.log(JSON.stringify(data))
+    // console.log(JSON.stringify(data))
     if (data.data) {
       res.redirect('/') 
     } else {

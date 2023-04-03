@@ -35,10 +35,3 @@ criteriaBtn.forEach(item => {
 
 });
 
-// Active menu item
-for (let i = 0; i < menuLength; i++) {
-    // console.log(menuItem[i].href);
-    if (menuItem[i].href === currentLocation) {
-        menuItem[i].className = "active "
-    }
-}
