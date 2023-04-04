@@ -1,52 +1,47 @@
 <%- include('./partials/head') %>
 <%- include('./partials/header') %>
 
-<main>
-  <h1>Toolboard</h1>
-  <% api.principes.forEach(principe => { %>
-  <article class="checklist" id="<%= principe.titel.toLowerCase() %>">
+<main class="checklist">
+    <h1>Checklist</h1>
     <section class="principe">
-      <h2><%= principe.titel %></h2>
-      <p><%- principe.beschrijving.html %></p>
-    </section>
-    <section class="principe__richtlijnen">
-      <% principe.richtlijnen.forEach(richtlijn => { %>
+        <% api.principes.forEach(principe=> { %>
+        <section class="principe__richtlijnen">
+            <h2><%- principe.titel %></h2>
+            <%- principe.beschrijving.html%>
+            <% principe.richtlijnen.forEach(richtlijn=> { %>
+            <details class="principe__informatie">
+                <summary>
+                    <h3><%- richtlijn.titel%></h3>
+                </summary>
+                <div class="criteria">
+                    <% richtlijn.succescriteria.forEach(succescritirum=> { %>
+                    <details class="criteria__informatie">
+                        <summary>
+                            <div>
+                                <h4><%- succescritirum.titel%></h4>
+                            </div>
+                            <label>
+                                <input type="checkbox">
+                                <svg width="12" height="9" viewBox="0 0 12 9" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M4.00005 6.60005L9.90005 0.700048C10.0834 0.516715 10.3167 0.425049 10.6 0.425049C10.8834 0.425049 11.1167 0.516715 11.3 0.700048C11.4834 0.883382 11.575 1.11671 11.575 1.40005C11.575 1.68338 11.4834 1.91672 11.3 2.10005L4.70005 8.70005C4.50005 8.90005 4.26672 9.00005 4.00005 9.00005C3.73338 9.00005 3.50005 8.90005 3.30005 8.70005L0.700048 6.10005C0.516715 5.91672 0.425049 5.68338 0.425049 5.40005C0.425049 5.11671 0.516715 4.88338 0.700048 4.70005C0.883382 4.51672 1.11672 4.42505 1.40005 4.42505C1.68338 4.42505 1.91672 4.51672 2.10005 4.70005L4.00005 6.60005Z"
+                                        fill="none"></path>
+                                </svg>
+                            </label>
+                        </summary>
+                        <div class="criteria__detail">
+                            g
+                        </div>
 
-      <button class="richtlijn__btn" data-id="<%= richtlijn.titel.toLowerCase() %>"><%= richtlijn.titel %></button>
-
-      <% }) %>
-
-      <% principe.richtlijnen.forEach(richtlijn => { %>
-
-      <div class="principe__informatie hide" id="<%= richtlijn.titel.toLowerCase() %>">
-        <div>
-          <%- richtlijn.uitleg.html %>
-          <% richtlijn.succescriteria.forEach(succescriterium=> { %>
-            <button class="richtlijn__btn1"
-              data-id="<%= `${succescriterium.id}` %>"><%= `${succescriterium.index} ${succescriterium.titel} niveau ${succescriterium.niveau}` %></button>
-            <% }) %>
-        </div>
-      
-        <% richtlijn.succescriteria.forEach(succescriterium=> { %>
-        <section class="criteria">
-          <div class="criteria__informatie hide" id="<%= `${succescriterium.id}` %>">
-            <h3><%= `${succescriterium.titel}` %></h3>
-            <label>
-              <input type="checkbox">
-              <svg width="12" height="9" viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M4.00005 6.60005L9.90005 0.700048C10.0834 0.516715 10.3167 0.425049 10.6 0.425049C10.8834 0.425049 11.1167 0.516715 11.3 0.700048C11.4834 0.883382 11.575 1.11671 11.575 1.40005C11.575 1.68338 11.4834 1.91672 11.3 2.10005L4.70005 8.70005C4.50005 8.90005 4.26672 9.00005 4.00005 9.00005C3.73338 9.00005 3.50005 8.90005 3.30005 8.70005L0.700048 6.10005C0.516715 5.91672 0.425049 5.68338 0.425049 5.40005C0.425049 5.11671 0.516715 4.88338 0.700048 4.70005C0.883382 4.51672 1.11672 4.42505 1.40005 4.42505C1.68338 4.42505 1.91672 4.51672 2.10005 4.70005L4.00005 6.60005Z" fill="none"></path>
-              </svg>
-          </label>
-          </div>
+                    </details>
+                    <%})%>
+                </div>
+            </details>
+            <%})%>
         </section>
-        <% }) %>
-
-      </div>
-
-      <% }) %>
+        <%})%>
     </section>
-  </article>
-  <% }) %>
 </main>
 
 <%- include('./partials/foot') %>
