@@ -27,7 +27,8 @@ Er is voor Vervoerregio Amsterdam een toegankelijkhedis-tool/toolboard gemaakt w
   * JSON
   * REST API  
   
-Naast deze kenmerken heb ik doormiddel van een forEach loop ervoor gezorgd dat ik alle principes heb kunnen tonen in een aparte contaienr. Hiermee heb ik ervoor kunnen zorgen dat ik een soort navigatie menu kon maken voor alle richtlijnen zodat er telkens maar 1 richtlijn tegelijk in beeld is. 
+### Progressive Enchancement
+Progressive enchanement is een principe dat er eigenlijk voor zorgt dat websites die bepaalde technieken gebruiken die niet worden ondersteund op oudere browsers toch nog zullen werken. Ik heb dit gedaan door bepaalde client side JS te verwijderen en het op nieuw te maken op server side waardoor het altijd werkt wanneer de server wordt geladen.
 
 ## Installatie
 
@@ -40,7 +41,7 @@ Naast deze kenmerken heb ik doormiddel van een forEach loop ervoor gezorgd dat i
  7. Ga vervolgens na de link wat onderaan in de terminal komt de staan in een browser
 ## Gebruik
 
-Met dit project kan je ervoor zorgen dat je een website (van een partner) kan beoordelen volgens de checklist van de WCAG principes en richtlijnen. Uiteindelijk kan je op basis van de succescritera kijken wat er nog niet gelukt is en op basis daarvan je website verbeteren. 
+De medewerkers van Vervoerregio Amsterdam kunnen deze website gebruiken om via een checklist website's van hun partners te kunnen controleren op de toegankelijkheid van de website.
 
 ## Bronnen
 
