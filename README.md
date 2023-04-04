@@ -4,28 +4,32 @@
 
 Het doel van de opdracht was om een API/Database te gebruiken voor het ontwerpen en ontwikkelen van een gebruiksvriendelijke server-side website voor Vervoerregio Amsterdam
 
+### User stories
+ * Als gebruiker wil ik een overzicht van toegankelijkheidsrichtlijnen kunnen bekijken, om te begrijpen wat er moet gebeuren om een website/app toegankelijker te maken
+ * Als gebruiker wil ik detail informatie over een toegankelijkheidsrichtlijn bekijken, om te beoordelen of mijn website/app voldoet aan de richtlijn
+
 ## Inhoudsopgave
 
-  * [Beschrijving](#beschrijving)
-  * [Kenmerken](#kenmerken)
-  * [Installatie](#installatie)
-  * [Gebruik](#gebruik)
-  * [Bronnen](#bronnen)
+ * [Beschrijving](#beschrijving)
+ * [Kenmerken](#kenmerken)
+ * [Installatie](#installatie)
+ * [Gebruik](#gebruik)
+ * [Bronnen](#bronnen)
   
 ## Beschrijving
 
-Er is voor Vervoerregio Amsterdam een toegankelijkhedis-tool/toolboard gemaakt waarmee je websites gemakkelijk toegankelijk kan maken door de verschillende richtlijnen e volgen van de WCAG principes.
+Er is voor Vervoerregio Amsterdam een toegankelijkhedis-tool/toolboard gemaakt waarmee je websites gemakkelijk toegankelijk kan maken door de verschillende richtlijnen te volgen van de WCAG principes.
 
 ## Kenmerken
 
-  * HTML
-  * CSS
-  * JS
-  * NODE
-  * EJS
-  * EXPRESS
-  * JSON
-  * REST API  
+ * HTML
+ * CSS
+ * JS
+ * NODE
+ * EJS
+ * EXPRESS
+ * JSON
+ * REST API  
   
 ### Progressive Enchancement
 Progressive enchanement is een principe dat er eigenlijk voor zorgt dat websites die bepaalde technieken gebruiken die niet worden ondersteund op oudere browsers toch nog zullen werken. Ik heb dit gedaan door bepaalde client side JS te verwijderen en het op nieuw te maken op server side waardoor het altijd werkt wanneer de server wordt geladen.
