@@ -154,7 +154,8 @@ main {
   align-items: center;
 }
 
-.websites__container div h2, .partners__container div h2 {
+.websites__container div h2,
+.partners__container div h2 {
   font-size: 1em;
 }
 

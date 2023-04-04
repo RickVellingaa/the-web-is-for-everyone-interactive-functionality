@@ -26,6 +26,7 @@ app.use(express.urlencoded({ extended: true }))
 // Gebruik de map 'public' voor statische resources
 app.use(express.static('public'))
 
+// Maak een route voor home
 app.get('/', function (req, res) {
   res.render('home', {url_data, data, website_data, active: '/'})
 })
@@ -45,6 +46,7 @@ app.get('/form', function (req, res) {
   res.render('form', {website_data, active: '/form'})
 })
 
+// Maak een route voor de partners
 app.get('/partners', (request, response) => {
   let id = request.query.websiteId
   let partnerUrl = 'https://api.vervoerregio-amsterdam.fdnd.nl/api/v1/urls?websiteId=' + id + '&first=100'
@@ -54,6 +56,7 @@ app.get('/partners', (request, response) => {
   })
 })
 
+// Maak een post route voor de partners waarmee ik user generated content kan achterlaten op de website
 app.post('/partners', function(req, res) {
   const formURL = baseURL + urlSlug
   postJson(formURL, req.body).then((data) => {
@@ -70,7 +73,7 @@ app.post('/partners', function(req, res) {
   })
 })
 
-
+// Maak een route voor de checks
 app.get('/check', (request, response) => {
   let id = request.query.id
   let checkUrl = 'https://api.vervoerregio-amsterdam.fdnd.nl/api/v1/url?id=' + id
@@ -80,7 +83,7 @@ app.get('/check', (request, response) => {
   })
 })
 
-// haalt post data op
+// Maak een post route voor de form pagina waarmee ik user generated content kan achterlaten op de website
 app.post('/form', function(req, res) {
   const formURL = baseURL + urlSlug
   postJson(formURL, req.body).then((data) => {

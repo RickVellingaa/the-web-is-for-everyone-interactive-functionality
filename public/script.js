@@ -6,11 +6,6 @@ const guidelineInfo = document.querySelectorAll('.principe__informatie')
 const criteriaBtn = document.querySelectorAll('.richtlijn__btn1')
 const criteraInfo = document.querySelectorAll('.criteria__informatie')
 
-// Active menu item
-const currentLocation = location.href;
-const menuItem = document.querySelectorAll('.navigation ul li a');
-const menuLength = menuItem.length;
-
 guidelineBtn.forEach(item => {
     item.addEventListener('click', () => {
         const id = item.dataset.id
