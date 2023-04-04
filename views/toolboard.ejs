@@ -12,11 +12,11 @@
         <% website_data.websites.forEach(website=> { %>
         <div class="partners__container">
             <div>
-                <h4><%= website.titel %></h4>
+                <h2><%= website.titel %></h2>
                 <a class="partners__link" target="_blank" href="<%= website.homepage %>"><%= website.homepage %></a>
             </div>
             <div class="website__urls">
-                <a class="website__icon" href="/partners?websiteId=<%= website.id %>"><img src="/assets/globe-outline.svg" alt=""></a>
+                <a class="website__icon" href="/partners?websiteId=<%= website.id %>"><img src="/assets/globe-outline.svg" alt="Check button" aria-label="Klik om de website te gaan checken"></a>
             </div>
         </div>
         <%})%>
