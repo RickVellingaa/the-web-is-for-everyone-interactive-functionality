@@ -4,30 +4,35 @@
 
 Het doel van de opdracht was om een API/Database te gebruiken voor het ontwerpen en ontwikkelen van een gebruiksvriendelijke server-side website voor Vervoerregio Amsterdam
 
+### User stories
+ * Als gebruiker wil ik een overzicht van toegankelijkheidsrichtlijnen kunnen bekijken, om te begrijpen wat er moet gebeuren om een website/app toegankelijker te maken
+ * Als gebruiker wil ik detail informatie over een toegankelijkheidsrichtlijn bekijken, om te beoordelen of mijn website/app voldoet aan de richtlijn
+
 ## Inhoudsopgave
 
-  * [Beschrijving](#beschrijving)
-  * [Kenmerken](#kenmerken)
-  * [Installatie](#installatie)
-  * [Gebruik](#gebruik)
-  * [Bronnen](#bronnen)
+ * [Beschrijving](#beschrijving)
+ * [Kenmerken](#kenmerken)
+ * [Installatie](#installatie)
+ * [Gebruik](#gebruik)
+ * [Bronnen](#bronnen)
   
 ## Beschrijving
 
-Er is voor Vervoerregio Amsterdam een toegankelijkhedis-tool/toolboard gemaakt waarmee je websites gemakkelijk toegankelijk kan maken door de verschillende richtlijnen e volgen van de WCAG principes.
+Er is voor Vervoerregio Amsterdam een toegankelijkhedis-tool/toolboard gemaakt waarmee je websites gemakkelijk toegankelijk kan maken door de verschillende richtlijnen te volgen van de WCAG principes.
 
 ## Kenmerken
 
-  * HTML
-  * CSS
-  * JS
-  * NODE
-  * EJS
-  * EXPRESS
-  * JSON
-  * REST API  
+ * HTML
+ * CSS
+ * JS
+ * NODE
+ * EJS
+ * EXPRESS
+ * JSON
+ * REST API  
   
-Naast deze kenmerken heb ik doormiddel van een forEach loop ervoor gezorgd dat ik alle principes heb kunnen tonen in een aparte contaienr. Hiermee heb ik ervoor kunnen zorgen dat ik een soort navigatie menu kon maken voor alle richtlijnen zodat er telkens maar 1 richtlijn tegelijk in beeld is. 
+### Progressive Enchancement
+Progressive enchanement is een principe dat er eigenlijk voor zorgt dat websites die bepaalde technieken gebruiken die niet worden ondersteund op oudere browsers toch nog zullen werken. Ik heb dit gedaan door bepaalde client side JS te verwijderen en het op nieuw te maken op server side waardoor het altijd werkt wanneer de server wordt geladen.
 
 ## Installatie
 
@@ -40,7 +45,7 @@ Naast deze kenmerken heb ik doormiddel van een forEach loop ervoor gezorgd dat i
  7. Ga vervolgens na de link wat onderaan in de terminal komt de staan in een browser
 ## Gebruik
 
-Met dit project kan je ervoor zorgen dat je een website (van een partner) kan beoordelen volgens de checklist van de WCAG principes en richtlijnen. Uiteindelijk kan je op basis van de succescritera kijken wat er nog niet gelukt is en op basis daarvan je website verbeteren. 
+De medewerkers van Vervoerregio Amsterdam kunnen deze website gebruiken om via een checklist website's van hun partners te kunnen controleren op de toegankelijkheid van de website.
 
 ## Bronnen
 
