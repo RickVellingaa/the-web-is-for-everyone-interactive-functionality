@@ -32,7 +32,7 @@ Er is voor Vervoerregio Amsterdam een toegankelijkhedis-tool/toolboard gemaakt w
  * REST API  
   
 ### Progressive Enchancement
-Progressive enchanement is een principe dat er eigenlijk voor zorgt dat websites die bepaalde technieken gebruiken die niet worden ondersteund op oudere browsers toch nog zullen werken. Ik heb dit gedaan door bepaalde client side JS te verwijderen en het op nieuw te maken op server side waardoor het altijd werkt wanneer de server wordt geladen.
+Progressive enchanement is een principe dat er eigenlijk voor zorgt dat websites die bepaalde technieken gebruiken die niet worden ondersteund op oudere browsers toch nog zullen werken. Ik heb dit gedaan door bepaalde client side JS te verwijderen en het op nieuw te maken op server side waardoor het altijd werkt wanneer de server wordt geladen. Ook heb ik alle client side code weggehaald voor een dropdown menu, in plaats van dit te doen met JS heb ik het gemaakt met `summary` en `details`
 
 ## Installatie
 
